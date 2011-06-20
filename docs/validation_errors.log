@@ -1,0 +1,6 @@
+Text for example in com.wowactions.realms:RealmService/getRealmsByStatus is not valid.
+org.xml.sax.SAXParseException: The reference to entity "lt" must end with the ';' delimiter.
+
+Text for example in com.wowactions.realms:RealmService/getRealmsByType is not valid.
+org.xml.sax.SAXParseException: The reference to entity "lt" must end with the ';' delimiter.
+
