@@ -254,14 +254,14 @@ package com.wowactions.guilds
 		 * @see com.wowactions.characters.Character
 		 * @see com.wowactions.specs.SpecData
 		 */
-		public function getMembersByMainSpec(specName:String):Vector.<Character>
+		public function getMembersByCharacterClass(characterClassName:String):Vector.<Character>
 		{
 			if (!members) return null;
 			
 			var chars:Vector.<Character> = new Vector.<Character>();
 			for (var i:int = 0; i < members.length; i++)
 			{
-				if (members[i].mainSpec.name.toLowerCase() == specName.toLowerCase())
+				if (members[i].mainSpec.name.toLowerCase() == characterClassName.toLowerCase())
 					chars.push(members[i]);
 			}
 			

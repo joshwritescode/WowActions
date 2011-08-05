@@ -2,12 +2,12 @@ package com.wowactions.guilds
 {
 	import com.adobe.serialization.json.JSON;
 	import com.wowactions.characters.Character;
+	import com.wowactions.characters.classes.CharacterClassData;
 	import com.wowactions.data.Achievement;
 	import com.wowactions.events.WowActionsEvent;
 	import com.wowactions.net.ServicePaths;
 	import com.wowactions.net.WowActionService;
 	import com.wowactions.races.RaceData;
-	import com.wowactions.specs.SpecData;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.net.URLLoader;
@@ -136,7 +136,7 @@ package com.wowactions.guilds
 					
 					character.name = memberInfo.name;
 					character.realm = memberInfo.realm;
-					character.mainSpec = SpecData.getSpecById(memberInfo["class"]); // class is a reservered word, so it's accessed with array notation to avoid compilation errors.
+					character.mainSpec = CharacterClassData.getClassById(memberInfo["class"]); // class is a reservered word, so it's accessed with array notation to avoid compilation errors.
 					character.race = RaceData.getRaceById(memberInfo.race);
 					character.gender = memberInfo.gender;
 					character.level = memberInfo.level;

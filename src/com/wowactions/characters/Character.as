@@ -1,9 +1,9 @@
 package com.wowactions.characters 
 {
+	import com.wowactions.characters.classes.CharacterClass;
 	import com.wowactions.data.Achievement;
 	import com.wowactions.guilds.Guild;
 	import com.wowactions.races.Race;
-	import com.wowactions.specs.Spec;
 	
 	/**
 	 * Contains data about a specific character from the game.
@@ -23,7 +23,7 @@ package com.wowactions.characters
 		
 		private var _name:String;
 		private var _realm:String;
-		private var _mainSpec:Spec;
+		private var _mainSpec:CharacterClass;
 		private var _race:Race;
 		private var _gender:String;
 		private var _level:int;
@@ -49,8 +49,8 @@ package com.wowactions.characters
 			_realm = value;
 		}
 		
-		public function get mainSpec():Spec { return _mainSpec; }
-		public function set mainSpec(value:Spec):void
+		public function get mainSpec():CharacterClass { return _mainSpec; }
+		public function set mainSpec(value:CharacterClass):void
 		{
 			_mainSpec = value;
 		}

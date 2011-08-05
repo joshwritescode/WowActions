@@ -1,7 +1,7 @@
-package com.wowactions.specs 
+package com.wowactions.characters.classes 
 {
 	/**
-	 * Contains properties related to character class specs.
+	 * Contains properties related to character classes.
 	 * 
 	 * @author Josh Brown
 	 * @see http://www.shift-f12.com
@@ -10,7 +10,7 @@ package com.wowactions.specs
 	 * @playerversion Flash 9.0
 	 * @since 8.5.2011
 	 */
-	public class Spec 
+	public class CharacterClass 
 	{
 		//========================================================
 		// Private Properties
@@ -66,14 +66,14 @@ package com.wowactions.specs
 		//========================================================
 		
 		/**
-		 * Creates a new instance of the Spec class.
+		 * Creates a new instance of the CharacterClass class.
 		 * 
 		 * @param	id (optional) The unique identifier of the spec.
 		 * @param	mask (optional) The mask of the spec.
 		 * @param	powerType (optional) The power specialization of the spec.
 		 * @param	name (optional) The name of the spec.
 		 */
-		public function Spec(id:Number = -1, mask:Number = -1, powerType:String = "", name:String = "")
+		public function CharacterClass(id:Number = -1, mask:Number = -1, powerType:String = "", name:String = "")
 		{
 			_id = id;
 			_mask = mask;
@@ -92,7 +92,7 @@ package com.wowactions.specs
 		 */
 		public function toString():String
 		{
-			return "Spec: " + id.toString() + " mask: " + mask.toString() + " powerType: " + powerType + " name: " + name;
+			return "CharacterClass: " + id.toString() + " mask: " + mask.toString() + " powerType: " + powerType + " name: " + name;
 		}
 	}
 

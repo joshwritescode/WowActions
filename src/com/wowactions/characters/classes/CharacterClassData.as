@@ -1,4 +1,4 @@
-package com.wowactions.specs 
+package com.wowactions.characters.classes 
 {
 	/**
 	 * A static class containing properties and methods related to character classes within the game.
@@ -10,7 +10,7 @@ package com.wowactions.specs
 	 * @playerversion Flash 9.0
 	 * @since 8.5.2011
 	 */
-	public class SpecData 
+	public class CharacterClassData 
 	{
 		//========================================================
 		// Public Properties
@@ -36,40 +36,40 @@ package com.wowactions.specs
 		 * 
 		 * @return A vector array of Spec's.
 		 */
-		public static function getAllSpecs():Vector.<Spec>
+		public static function getAllClasses():Vector.<CharacterClass>
 		{
-			var specs:Vector.<Spec> = new Vector.<Spec>();
+			var classes:Vector.<CharacterClass> = new Vector.<CharacterClass>();
 			
-			specs.push(new Spec(3, 4, "focus", "Hunter"));
-			specs.push(new Spec(4, 8, "energy", "Rogue"));
-			specs.push(new Spec(1, 1, "rage", "Warrior"));
-			specs.push(new Spec(2, 2, "mana", "Paladin"));
-			specs.push(new Spec(7, 64, "mana", "Shaman"));
-			specs.push(new Spec(8, 128, "mana", "Mage"));
-			specs.push(new Spec(5, 16, "mana", "Priest"));
-			specs.push(new Spec(6, 32, "runic-power", "Death Knight"));
-			specs.push(new Spec(11, 1024, "mana", "Druid"));
-			specs.push(new Spec(9, 256, "mana", "Warlock"));
+			classes.push(new CharacterClass(3, 4, "focus", "Hunter"));
+			classes.push(new CharacterClass(4, 8, "energy", "Rogue"));
+			classes.push(new CharacterClass(1, 1, "rage", "Warrior"));
+			classes.push(new CharacterClass(2, 2, "mana", "Paladin"));
+			classes.push(new CharacterClass(7, 64, "mana", "Shaman"));
+			classes.push(new CharacterClass(8, 128, "mana", "Mage"));
+			classes.push(new CharacterClass(5, 16, "mana", "Priest"));
+			classes.push(new CharacterClass(6, 32, "runic-power", "Death Knight"));
+			classes.push(new CharacterClass(11, 1024, "mana", "Druid"));
+			classes.push(new CharacterClass(9, 256, "mana", "Warlock"));
 			
-			return specs;
+			return classes;
 		}
 		
 		/**
 		 * Returns the spec matching the given id.
 		 * 
-		 * @param	id The id of the Spec that should be returned.
+		 * @param	id The id of the CharacterClassData that should be returned.
 		 * 
 		 * @return The Spec matching the given id, or <code>null</code> if no Spec with a matching id is found.
 		 */
-		public static function getSpecById(id:Number):Spec
+		public static function getClassById(id:Number):CharacterClass
 		{
-			var allSpecs:Vector.<Spec> = getAllSpecs();
+			var classes:Vector.<CharacterClass> = getAllClasses();
 			
-			for (var i:int = 0; i < allSpecs.length; i++)
+			for (var i:int = 0; i < classes.length; i++)
 			{
-				if (allSpecs[i].id == id)
+				if (classes[i].id == id)
 				{
-					return allSpecs[i];
+					return classes[i];
 				}
 			}
 			
@@ -83,15 +83,15 @@ package com.wowactions.specs
 		 * 
 		 * @return The Spec matching the given name, or <code>null</code> if no Spec with a matching id is found.
 		 */
-		public static function getSpecByName(name:String):Spec
+		public static function getClassByName(name:String):CharacterClass
 		{
-			var allSpecs:Vector.<Spec> = getAllSpecs();
+			var classes:Vector.<CharacterClass> = getAllClasses();
 			
-			for (var i:int = 0; i < allSpecs.length; i++)
+			for (var i:int = 0; i < classes.length; i++)
 			{
-				if (allSpecs[i].name.toLowerCase() == name.toLowerCase())
+				if (classes[i].name.toLowerCase() == name.toLowerCase())
 				{
-					return allSpecs[i];
+					return classes[i];
 				}
 			}
 			
@@ -105,15 +105,15 @@ package com.wowactions.specs
 		 * 
 		 * @return The Spec matching the given mask, or <code>null</code> if no Spec with a matching mask is found.
 		 */
-		public function getSpecByMask(mask:Number):Spec
+		public function getClassByMask(mask:Number):CharacterClass
 		{
-			var allSpecs:Vector.<Spec> = getAllSpecs();
+			var classes:Vector.<CharacterClass> = getAllClasses();
 			
-			for (var i:int = 0; i < allSpecs.length; i++)
+			for (var i:int = 0; i < classes.length; i++)
 			{
-				if (allSpecs[i].mask == mask)
+				if (classes[i].mask == mask)
 				{
-					return allSpecs[i];
+					return classes[i];
 				}
 			}
 			
@@ -127,7 +127,7 @@ package com.wowactions.specs
 		/**
 		 * SpecData is a static class that does not need to be instantiated.
 		 */
-		public function SpecData() 
+		public function CharacterClassData() 
 		{
 			
 		}
