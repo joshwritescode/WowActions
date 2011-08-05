@@ -115,7 +115,7 @@ package com.wowactions.guilds
 			var loader:URLLoader = event.target as URLLoader;
 			loader.removeEventListener(Event.COMPLETE, _onGuildInfoRetrieved);
 			loader.removeEventListener(IOErrorEvent.IO_ERROR, _onIOError);
-			trace(loader.data);
+			
 			var guildInfo:Object = JSON.decode(loader.data);
 			
 			var guild:Guild = new Guild();
