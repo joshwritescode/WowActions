@@ -24,7 +24,7 @@ package com.wowactions.realms
 	 * successfully retrieved from the Blizzard servers.
 	 * 
 	 * @author Josh Brown
-	 * @link http://www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0
@@ -43,8 +43,9 @@ package com.wowactions.realms
 		/**
 		 * Creates a new instance of the RealmService class that can be used to easily retrieve realm data from the blizzard servers.
 		 * 
-		 * @param	region The physical region you would like the data to be retrieved from.  There are only a few regions currently supported
-		 * in the Region static class, but as long as it is a valid region from blizzard everything will work just fine.
+		 * @param	region The physical region you would like the data to be retrieved from.  <b>Only the regions located in the Region static class
+		 * are actually available from the Blizzard Community Platform API</b>.  If you don't see your region in the static class, it's because it 
+		 * is not supported by the API and it will not work with this library.
 		 * 
 		 * @see com.wowactions.data.Region
 		 */
@@ -100,7 +101,7 @@ package com.wowactions.realms
 			var url:String = ServicePaths.getBasePath(_region) + ServicePaths.REALM + ServiceActions.GET_STATUS + variables;
 			request.url = encodeURI(url);
 			
-			loader.data = URLLoaderDataFormat.TEXT;
+			loader.dataFormat = URLLoaderDataFormat.TEXT;
 			loader.addEventListener(Event.COMPLETE, _onRealmsRetrieved);
 			loader.addEventListener(IOErrorEvent.IO_ERROR, _onIOError);
 			loader.load(request);
@@ -158,9 +159,12 @@ package com.wowactions.realms
 			
 			var loader:URLLoader = new URLLoader();
 			var request:URLRequest = new URLRequest();
+			var headers:Array = new Array();
+			
 			
 			var url:String = ServicePaths.getBasePath(_region) + ServicePaths.REALM + ServiceActions.GET_STATUS;
 			request.url = encodeURI(url);
+			
 			
 			loader.dataFormat = URLLoaderDataFormat.TEXT;
 			loader.addEventListener(Event.COMPLETE, _onRealmsByStatusRetrieved);

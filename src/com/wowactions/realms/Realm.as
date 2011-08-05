@@ -4,7 +4,7 @@ package com.wowactions.realms
 	 * This class is used to store all the information about a specific realm.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0

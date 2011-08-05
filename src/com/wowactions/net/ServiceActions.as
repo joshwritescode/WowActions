@@ -4,7 +4,7 @@ package com.wowactions.net
 	 * Contains constants used in the creation of the api url request.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0

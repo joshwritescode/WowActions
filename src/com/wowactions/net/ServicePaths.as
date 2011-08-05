@@ -4,7 +4,7 @@ package com.wowactions.net
 	 * The paths to the different parts of the api.  Currently only supports Realm, but more paths will be added for characters, guilds, etc.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0
@@ -12,11 +12,13 @@ package com.wowactions.net
 	 */
 	public class ServicePaths 
 	{
+		public static const BASE_QUERY_URL:String = "/api/wow/";
 		public static const REALM:String = "realm/";
+		public static const GUILD:String = "guild/";
 		
 		public static function getBasePath(region:String):String
 		{
-			return "http://" + region + ".battle.net/api/wow/";
+			return "http://" + region + BASE_QUERY_URL;
 		}
 		
 		public function ServicePaths() 

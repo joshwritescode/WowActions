@@ -6,7 +6,7 @@ package com.wowactions.events
 	 * The custom event class for the WowActions api.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0
@@ -15,6 +15,7 @@ package com.wowactions.events
 	public class WowActionsEvent extends Event 
 	{
 		public static const REALMS_RETRIEVED:String = "realmsRetrieved";
+		public static const GUILD_INFO_RETRIEVED:String = "guildInfoRetrieved";
 		public static const DATA_ERROR:String = "dataError";
 		
 		public var data:*;
@@ -33,7 +34,7 @@ package com.wowactions.events
 		
 		public override function toString():String 
 		{ 
-			return formatToString("WowActionsEvent", "type", "data", "bubbles", "cancelable", "eventPhase"); 
+			return formatToString("WowActionsEvent", "type", "data", "bubbles", "cancelable", "eventPhase");
 		}
 		
 	}

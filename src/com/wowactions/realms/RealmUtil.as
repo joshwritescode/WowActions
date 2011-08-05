@@ -4,7 +4,7 @@ package com.wowactions.realms
 	 * Contains various methods that can be used when dealing with Realms.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0

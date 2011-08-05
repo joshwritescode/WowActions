@@ -4,7 +4,7 @@ package com.wowactions.realms
 	 * Contains the various data that can be used in conjunction with RealmService requests.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0

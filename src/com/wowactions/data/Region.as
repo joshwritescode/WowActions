@@ -4,7 +4,7 @@ package com.wowactions.data
 	 * The physical regions that the data will be pulled from.
 	 * 
 	 * @author Josh Brown
-	 * @link www.shift-f12.com
+	 * @see http://www.shift-f12.com
 	 * 
 	 * @langversion 3.0
 	 * @playerversion Flash 9.0
@@ -12,9 +12,11 @@ package com.wowactions.data
 	 */
 	public class Region 
 	{
-		public static const UNITED_STATES:String = "us";
-		public static const EUROPE:String = "eu";
-		public static const CANADA:String = "ca";
+		public static const UNITED_STATES:String = "us.battle.net";
+		public static const EUROPE:String = "eu.battle.net";
+		public static const KOREA:String = "kr.battle.net";
+		public static const TAIWAN:String = "tw.battle.net";
+		public static const CHINA:String = "battlenet.com.cn";
 		
 		public function Region() 
 		{
