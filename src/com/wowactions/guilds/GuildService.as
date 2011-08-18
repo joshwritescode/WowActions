@@ -2,7 +2,7 @@ package com.wowactions.guilds
 {
 	import com.adobe.serialization.json.JSON;
 	import com.wowactions.characters.Character;
-	import com.wowactions.characters.classes.CharacterClassData;
+	import com.wowactions.characters.CharacterClassData;
 	import com.wowactions.data.Achievement;
 	import com.wowactions.events.WowActionsEvent;
 	import com.wowactions.net.ServicePaths;
@@ -26,10 +26,10 @@ package com.wowactions.guilds
 	 * Contains methods that allow the retrieval of guild information.
 	 * 
 	 * @author Josh Brown
-	 * @see http://www.shift-f12.com
+	 * @see http://www.shift-f12.com/wowactions
 	 * 
 	 * @langversion 3.0
-	 * @playerversion Flash 9.0
+	 * @playerversion Flash 10.0
 	 * @since 8.5.2011
 	 */
 	public class GuildService extends WowActionService
@@ -69,7 +69,7 @@ package com.wowactions.guilds
 		 * 
 		 * @see com.wowactions.data.Region
 		 */
-		public function GuildService(region:String, realm:String) 
+		public function GuildService(region:String, realm:String)
 		{
 			_realm = realm;
 			super(region);
@@ -136,7 +136,7 @@ package com.wowactions.guilds
 					
 					character.name = memberInfo.name;
 					character.realm = memberInfo.realm;
-					character.mainSpec = CharacterClassData.getClassById(memberInfo["class"]); // class is a reservered word, so it's accessed with array notation to avoid compilation errors.
+					character.characterClass = CharacterClassData.getClassById(memberInfo["class"]); // class is a reservered word, so it's accessed with array notation to avoid compilation errors.
 					character.race = RaceData.getRaceById(memberInfo.race);
 					character.gender = memberInfo.gender;
 					character.level = memberInfo.level;

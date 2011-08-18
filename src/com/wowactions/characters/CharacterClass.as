@@ -1,13 +1,13 @@
-package com.wowactions.characters.classes 
+package com.wowactions.characters 
 {
 	/**
 	 * Contains properties related to character classes.
 	 * 
 	 * @author Josh Brown
-	 * @see http://www.shift-f12.com
+	 * @see http://www.shift-f12.com/wowactions
 	 * 
 	 * @langversion 3.0
-	 * @playerversion Flash 9.0
+	 * @playerversion Flash 10.0
 	 * @since 8.5.2011
 	 */
 	public class CharacterClass 

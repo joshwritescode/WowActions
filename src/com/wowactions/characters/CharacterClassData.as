@@ -1,13 +1,13 @@
-package com.wowactions.characters.classes 
+package com.wowactions.characters 
 {
 	/**
 	 * A static class containing properties and methods related to character classes within the game.
 	 * 
 	 * @author Josh Brown
-	 * @see http://www.shift-f12.com
+	 * @see http://www.shift-f12.com/wowactions
 	 * 
 	 * @langversion 3.0
-	 * @playerversion Flash 9.0
+	 * @playerversion Flash 10.0
 	 * @since 8.5.2011
 	 */
 	public class CharacterClassData 
@@ -34,7 +34,7 @@ package com.wowactions.characters.classes
 		/**
 		 * Retrieves all specs from the game.
 		 * 
-		 * @return A vector array of Spec's.
+		 * @return A vector array of all available Classes.
 		 */
 		public static function getAllClasses():Vector.<CharacterClass>
 		{
@@ -59,7 +59,7 @@ package com.wowactions.characters.classes
 		 * 
 		 * @param	id The id of the CharacterClassData that should be returned.
 		 * 
-		 * @return The Spec matching the given id, or <code>null</code> if no Spec with a matching id is found.
+		 * @return The CharacterClass matching the given id, or <code>null</code> if no CharacterClass with a matching id is found.
 		 */
 		public static function getClassById(id:Number):CharacterClass
 		{
@@ -79,9 +79,9 @@ package com.wowactions.characters.classes
 		/**
 		 * Returns a spec matching the given name.
 		 * 
-		 * @param	name The name of the Spec that should be returned.
+		 * @param	name The name of the CharacterClass that should be returned.
 		 * 
-		 * @return The Spec matching the given name, or <code>null</code> if no Spec with a matching id is found.
+		 * @return The CharacterClass matching the given name, or <code>null</code> if no CharacterClass with a matching id is found.
 		 */
 		public static function getClassByName(name:String):CharacterClass
 		{
@@ -99,11 +99,11 @@ package com.wowactions.characters.classes
 		}
 		
 		/**
-		 * Returns a spec matching the given mask.
+		 * Returns a CharacterClass matching the given mask.
 		 * 
-		 * @param	mask The mask of the Spec that should be returned.
+		 * @param	mask The mask of the CharacterClass that should be returned.
 		 * 
-		 * @return The Spec matching the given mask, or <code>null</code> if no Spec with a matching mask is found.
+		 * @return The CharacterClass matching the given mask, or <code>null</code> if no CharacterClass with a matching mask is found.
 		 */
 		public function getClassByMask(mask:Number):CharacterClass
 		{
@@ -125,7 +125,7 @@ package com.wowactions.characters.classes
 		//========================================================
 		
 		/**
-		 * SpecData is a static class that does not need to be instantiated.
+		 * CharacterClassData is a static class that does not need to be instantiated.
 		 */
 		public function CharacterClassData() 
 		{

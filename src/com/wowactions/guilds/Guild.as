@@ -7,10 +7,10 @@ package com.wowactions.guilds
 	 * The Guild class contains information about a guild, as well as methods to retrieve member and achievement data.
 	 * 
 	 * @author Josh Brown
-	 * @see http://www.shift-f12.com
+	 * @see http://www.shift-f12.com/wowactions
 	 * 
 	 * @langversion 3.0
-	 * @playerversion Flash 9.0
+	 * @playerversion Flash 10.0
 	 * @since 8.5.2011
 	 */
 	public class Guild 
@@ -25,6 +25,8 @@ package com.wowactions.guilds
 		private var _achievementPoints:Number;
 		private var _members:Vector.<Character>;
 		private var _achievements:Vector.<Achievement>;
+		private var _numMembers:int;
+		private var _realm:String;
 		
 		//========================================================
 		// Getters / Setters
@@ -73,6 +75,7 @@ package com.wowactions.guilds
 		public function set members(value:Vector.<Character>):void
 		{
 			_members = value;
+			numMembers = members.length;
 		}
 		
 		/**
@@ -82,6 +85,21 @@ package com.wowactions.guilds
 		public function set achievements(value:Vector.<Achievement>):void
 		{
 			_achievements = value;
+		}
+		
+		/**
+		 * The number of members currently in the guild.
+		 */
+		public function get numMembers():int { return _numMembers; }
+		public function set numMembers(value:int):void
+		{
+			_numMembers = value;
+		}
+		
+		public function get realm():String { return _realm; }
+		public function set realm(value:String):void
+		{
+			_realm = value;
 		}
 		
 		//========================================================
@@ -252,7 +270,7 @@ package com.wowactions.guilds
 		 * @return A vector array of members with the given spec, or <code>null</code> if members have not been retrieved for the guild.
 		 * 
 		 * @see com.wowactions.characters.Character
-		 * @see com.wowactions.specs.SpecData
+		 * @see com.wowactions.characters.classes.CharacterClassData
 		 */
 		public function getMembersByCharacterClass(characterClassName:String):Vector.<Character>
 		{
@@ -261,7 +279,7 @@ package com.wowactions.guilds
 			var chars:Vector.<Character> = new Vector.<Character>();
 			for (var i:int = 0; i < members.length; i++)
 			{
-				if (members[i].mainSpec.name.toLowerCase() == characterClassName.toLowerCase())
+				if (members[i].characterClass.name.toLowerCase() == characterClassName.toLowerCase())
 					chars.push(members[i]);
 			}
 			
